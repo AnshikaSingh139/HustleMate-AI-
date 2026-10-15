@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HustleMate AI | Your Side Hustle Partner</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon">H</div>
+                <div>
+                    <h2>HustleMate</h2>
+                    <p>AI WORKSPACE</p>
+                </div>
+            </div>
+
+            <div class="profile">
+                <div class="avatar">HM</div>
+                <div>
+                    <strong>My Workspace</strong>
+                    <small>Creator account</small>
+                </div>
+            </div>
+
+            <p class="menu-label">WORKSPACE</p>
+
+            <nav class="navigation">
+                <button class="nav-item active" data-page="dashboard">
+                    <span>⌂</span> Dashboard
+                </button>
+
+                <button class="nav-item" data-page="content">
+                    <span>✎</span> Content Writer
+                </button>
+
+                <button class="nav-item" data-page="product">
+                    <span>◇</span> Product Listings
+                </button>
+
+                <button class="nav-item" data-page="pricing">
+                    <span>₹</span> Pricing Calculator
+                </button>
+
+                <button class="nav-item" data-page="proposal">
+                    <span>▤</span> Client Proposals
+                </button>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="privacy-card">
+                    <span class="privacy-icon">🔒</span>
+                    <h4>Your AI, Your Rules</h4>
+                    <p>Use a local AI model to keep your work on your own computer.</p>
+                </div>
+
+                <button class="nav-item" data-page="settings">
+                    <span>⚙</span> AI Settings
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main content -->
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <p class="breadcrumb">Workspace / <span id="breadcrumb-page">Dashboard</span></p>
+                    <h1 id="page-heading">Your hustle starts here.</h1>
+                </div>
+
+                <div class="topbar-right">
+                    <span class="status-dot"></span>
+                    <span id="connection-status">Local AI not checked</span>
+                </div>
+            </header>
+
+            <!-- Dashboard -->
+            <section class="page active" id="dashboard">
+
+                <div class="hero">
+                    <div class="hero-content">
+                        <span class="eyebrow">YOUR PERSONAL AI WORKSPACE</span>
+
+                        <h2>Turn your ideas into <span>income.</span></h2>
+
+                        <p>
+                            Create content, prepare product listings, calculate
+                            prices, and pitch clients—all in one workspace.
+                        </p>
+
+                        <button class="primary-btn" data-go="content">
+                            Start creating <span>→</span>
+                        </button>
+                    </div>
+
+                    <div class="hero-art">
+                        <div class="art-circle">✦</div>
+                        <div class="art-card card-one">
+                            <span>✎</span>
+                            <div>
+                                <strong>Content</strong>
+                                <small>Ready to create</small>
+                            </div>
+                        </div>
+
+                        <div class="art-card card-two">
+                            <span>₹</span>
+                            <div>
+                                <strong>Pricing</strong>
+                                <small>Know your numbers</small>
+                            </div>
+                        </div>
+
+                        <div class="art-card card-three">
+                            <span>↗</span>
+                            <div>
+                                <strong>Growth</strong>
+                                <small>One step at a time</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Your toolkit</h2>
+                        <p>Everything you need to get your side hustle moving.</p>
+                    </div>
+                </div>
+
+                <div class="tool-grid">
+
+                    <article class="tool-card">
+                        <div class="tool-icon purple">✎</div>
+                        <span class="tool-tag">AI WRITING</span>
+                        <h3>Content Writer</h3>
+                        <p>Draft social posts, captions, and promotional content.</p>
+                        <button class="text-btn" data-go="content">Open tool →</button>
+                    </article>
+
+                    <article class="tool-card">
+                        <div class="tool-icon orange">◇</div>
+                        <span class="tool-tag">E-COMMERCE</span>
+                        <h3>Product Listings</h3>
+                        <p>Generate product titles, descriptions, and selling points.</p>
+                        <button class="text-btn" data-go="product">Open tool →</button>
+                    </article>
+
+                    <article class="tool-card">
+                        <div class="tool-icon green">₹</div>
+                        <span class="tool-tag">BUSINESS</span>
+                        <h3>Pricing Calculator</h3>
+                        <p>Estimate a selling price using costs and your target margin.</p>
+                        <button class="text-btn" data-go="pricing">Open tool →</button>
+                    </article>
+
+                    <article class="tool-card">
+                        <div class="tool-icon blue">▤</div>
+                        <span class="tool-tag">FREELANCING</span>
+                        <h3>Client Proposals</h3>
+                        <p>Draft professional proposals for potential clients.</p>
+                        <button class="text-btn" data-go="proposal">Open tool →</button>
+                    </article>
+
+                </div>
+
+                <div class="info-banner">
+                    <div class="info-symbol">✦</div>
+                    <div>
+                        <h3>Built around open AI</h3>
+                        <p>
+                            Connect a compatible local model through Ollama.
+                            You control the model, and your prompts can stay on your device.
+                        </p>
+                    </div>
+                    <button class="secondary-btn" data-go="settings">Configure AI</button>
+                </div>
+
+            </section>
+
+            <!-- Content Writer -->
+            <section class="page" id="content">
+
+                <div class="page-intro">
+                    <span class="eyebrow">AI CONTENT STUDIO</span>
+                    <h2>Words that work for your business.</h2>
+                    <p>Generate a first draft, then edit it to match your voice.</p>
+                </div>
+
+                <div class="workspace-grid">
+                    <div class="panel">
+                        <h3>Create content</h3>
+
+                        <form id="content-form">
+
+                            <label for="content-type">Content type</label>
+                            <select id="content-type">
+                                <option>Instagram caption</option>
+                                <option>LinkedIn post</option>
+                                <option>Promotional message</option>
+                                <option>Short blog introduction</option>
+                                <option>Product announcement</option>
+                            </select>
+
+                            <label for="content-topic">What is it about?</label>
+                            <textarea id="content-topic" rows="4"
+                                placeholder="Example: Handmade scented candles for a small online shop"
+                                required></textarea>
+
+                            <label for="content-tone">Tone of voice</label>
+                            <select id="content-tone">
+                                <option>Friendly and engaging</option>
+                                <option>Professional</option>
+                                <option>Creative and playful</option>
+                                <option>Minimal and direct</option>
+                            </select>
+
+                            <label for="content-audience">Target audience</label>
+                            <input id="content-audience" type="text"
+                                placeholder="Example: College students">
+
+                            <button class="primary-btn full-width" type="submit">
+                                ✦ Generate content
+                            </button>
+
+                        </form>
+                    </div>
+
+                    <div class="panel output-panel">
+                        <div class="output-header">
+                            <div>
+                                <span class="eyebrow">YOUR DRAFT</span>
+                                <h3>Generated content</h3>
+                            </div>
+                            <span class="output-badge">AI OUTPUT</span>
+                        </div>
+
+                        <div class="output-box" id="content-output">
+                            <div class="empty-state">
+                                <div class="empty-icon">✎</div>
+                                <h4>Your next great idea starts here.</h4>
+                                <p>Fill out the form and generate your first draft.</p>
+                            </div>
+                        </div>
+
+                        <div class="output-actions">
+                            <button class="secondary-btn" data-copy="content-output">
+                                Copy text
+                            </button>
+
+                            <button class="secondary-btn" data-download="content-output">
+                                Download
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Product Listings -->
+            <section class="page" id="product">
+
+                <div class="page-intro">
+                    <span class="eyebrow">PRODUCT STUDIO</span>
+                    <h2>Make your product stand out.</h2>
+                    <p>Turn basic product details into a clearer listing.</p>
+                </div>
+
+                <div class="workspace-grid">
+
+                    <div class="panel">
+                        <h3>Product details</h3>
+
+                        <form id="product-form">
+
+                            <label for="product-name">Product name</label>
+                            <input id="product-name" type="text"
+                                placeholder="Example: Eco-friendly notebook" required>
+
+                            <label for="product-features">Key features</label>
+                            <textarea id="product-features" rows="4"
+                                placeholder="Example: Recycled paper, 200 pages, compact design"
+                                required></textarea>
+
+                            <label for="product-audience">Ideal customer</label>
+                            <input id="product-audience" type="text"
+                                placeholder="Example: Students and professionals">
+
+                            <label for="product-platform">Platform</label>
+                            <select id="product-platform">
+                                <option>Online store</option>
+                                <option>Instagram Shop</option>
+                                <option>Marketplace</option>
+                                <option>WhatsApp Business</option>
+                            </select>
+
+                            <button class="primary-btn full-width" type="submit">
+                                ✦ Create product listing
+                            </button>
+
+                        </form>
+                    </div>
+
+                    <div class="panel output-panel">
+                        <div class="output-header">
+                            <div>
+                                <span class="eyebrow">LISTING PREVIEW</span>
+                                <h3>Your product copy</h3>
+                            </div>
+                        </div>
+
+                        <div class="output-box" id="product-output">
+                            <div class="empty-state">
+                                <div class="empty-icon">◇</div>
+                                <h4>Give your product a voice.</h4>
+                                <p>Your listing will appear here.</p>
+                            </div>
+                        </div>
+
+                        <div class="output-actions">
+                            <button class="secondary-btn" data-copy="product-output">
+                                Copy text
+                            </button>
+
+                            <button class="secondary-btn" data-download="product-output">
+                                Download
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Pricing Calculator -->
+            <section class="page" id="pricing">
+
+                <div class="page-intro">
+                    <span class="eyebrow">BUSINESS TOOLKIT</span>
+                    <h2>Price with a plan.</h2>
+                    <p>Estimate your selling price using your costs and desired margin.</p>
+                </div>
+
+                <div class="pricing-grid">
+
+                    <div class="panel">
+                        <h3>Enter your numbers</h3>
+
+                        <form id="pricing-form">
+
+                            <label for="cost">Product or service cost (₹)</label>
+                            <input id="cost" type="number" min="0" step="0.01"
+                                placeholder="Example: 200" required>
+
+                            <label for="packaging">Packaging and extra costs (₹)</label>
+                            <input id="packaging" type="number" min="0" step="0.01"
+                                value="0" required>
+
+                            <label for="fees">Platform or transaction fees (%)</label>
+                            <input id="fees" type="number" min="0" max="99.99"
+                                step="0.1" value="0" required>
+
+                            <label for="margin">Target profit margin (%)</label>
+                            <input id="margin" type="number" min="0" max="99"
+                                step="1" value="30" required>
+
+                            <button class="primary-btn full-width" type="submit">
+                                Calculate price →
+                            </button>
+
+                        </form>
+                    </div>
+
+                    <div class="panel price-result">
+                        <span class="eyebrow">YOUR ESTIMATE</span>
+                        <h3>Suggested selling price</h3>
+
+                        <div class="price-display">
+                            <span>₹</span><strong id="selling-price">0.00</strong>
+                        </div>
+
+                        <div class="result-row">
+                            <span>Total cost</span>
+                            <strong id="total-cost">₹0.00</strong>
+                        </div>
+
+                        <div class="result-row">
+                            <span>Estimated fees</span>
+                            <strong id="estimated-fees">₹0.00</strong>
+                        </div>
+
+                        <div class="result-row">
+                            <span>Estimated profit</span>
+                            <strong id="estimated-profit">₹0.00</strong>
+                        </div>
+
+                        <div class="result-row">
+                            <span>Profit margin</span>
+                            <strong id="actual-margin">0%</strong>
+                        </div>
+
+                        <p class="small-note">
+                            This is an estimate, not a guarantee of profit.
+                            Consider taxes, returns, discounts, and other expenses.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Client Proposals -->
+            <section class="page" id="proposal">
+
+                <div class="page-intro">
+                    <span class="eyebrow">FREELANCE TOOLKIT</span>
+                    <h2>Pitch your next big idea.</h2>
+                    <p>Prepare a proposal draft you can personalize for each client.</p>
+                </div>
+
+                <div class="workspace-grid">
+
+                    <div class="panel">
+                        <h3>Project information</h3>
+
+                        <form id="proposal-form">
+
+                            <label for="client-name">Client or business name</label>
+                            <input id="client-name" type="text"
+                                placeholder="Example: BrightLeaf Studio" required>
+
+                            <label for="service-name">Service offered</label>
+                            <input id="service-name" type="text"
+                                placeholder="Example: Social media management" required>
+
+                            <label for="project-details">Project requirements</label>
+                            <textarea id="project-details" rows="4"
+                                placeholder="Describe what the client needs..." required></textarea>
+
+                            <label for="project-budget">Proposed budget (₹)</label>
+                            <input id="project-budget" type="number" min="0"
+                                placeholder="Example: 5000">
+
+                            <label for="project-timeline">Estimated timeline</label>
+                            <input id="project-timeline" type="text"
+                                placeholder="Example: 2 weeks">
+
+                            <button class="primary-btn full-width" type="submit">
+                                ✦ Draft proposal
+                            </button>
+
+                        </form>
+                    </div>
+
+                    <div class="panel output-panel">
+                        <div class="output-header">
+                            <div>
+                                <span class="eyebrow">CLIENT DOCUMENT</span>
+                                <h3>Proposal draft</h3>
+                            </div>
+                        </div>
+
+                        <div class="output-box" id="proposal-output">
+                            <div class="empty-state">
+                                <div class="empty-icon">▤</div>
+                                <h4>Make your next pitch count.</h4>
+                                <p>Complete the project details to draft a proposal.</p>
+                            </div>
+                        </div>
+
+                        <div class="output-actions">
+                            <button class="secondary-btn" data-copy="proposal-output">
+                                Copy text
+                            </button>
+
+                            <button class="secondary-btn" data-download="proposal-output">
+                                Download
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- AI Settings -->
+            <section class="page" id="settings">
+
+                <div class="page-intro">
+                    <span class="eyebrow">OPEN AI CONFIGURATION</span>
+                    <h2>Your AI, your choice.</h2>
+                    <p>Connect a compatible locally running Ollama model.</p>
+                </div>
+
+                <div class="panel settings-panel">
+
+                    <div class="settings-heading">
+                        <div class="tool-icon purple">⚙</div>
+                        <div>
+                            <h3>Local AI connection</h3>
+                            <p>Configure where the website sends generation requests.</p>
+                        </div>
+                    </div>
+
+                    <form id="settings-form">
+
+                        <label for="ai-endpoint">Ollama API endpoint</label>
+                        <input id="ai-endpoint" type="url"
+                            value="http://localhost:11434/api/generate" required>
+
+                        <label for="ai-model">Model name</label>
+                        <input id="ai-model" type="text"
+                            value="qwen2.5:3b" required>
+
+                        <div class="settings-note">
+                            <strong>Privacy first</strong>
+                            <p>
+                                This demo is designed for a local Ollama endpoint.
+                                Keep the endpoint on your own computer. Do not enter
+                                private client information into an AI system unless
+                                you understand where the data is processed.
+                            </p>
+                        </div>
+
+                        <button class="primary-btn" type="submit">
+                            Save settings
+                        </button>
+
+                        <button class="secondary-btn" id="test-ai" type="button">
+                            Test connection
+                        </button>
+
+                    </form>
+
+                    <p id="settings-message" class="settings-message" role="status"></p>
+
+                    <div class="setup-guide">
+                        <h3>How to set up local AI</h3>
+
+                        <ol>
+                            <li>Install Ollama from its official website.</li>
+                            <li>Open a terminal and run <code>ollama pull qwen2.5:3b</code>.</li>
+                            <li>Start the model using <code>ollama run qwen2.5:3b</code>.</li>
+                            <li>Serve this website through a local development server.</li>
+                            <li>Configure Ollama to accept requests from your website's local origin.</li>
+                            <li>Return here and select <strong>Test connection</strong>.</li>
+                        </ol>
+
+                        <p class="small-note">
+                            Browser cross-origin restrictions may prevent requests until
+                            Ollama's allowed origins are configured. Do not expose the
+                            local API publicly. Model requirements depend on your computer.
+                        </p>
+
+                        <p>
+                            Official setup guide:
+                            <a href="https://ollama.com/download"
+                                target="_blank" rel="noopener noreferrer">
+                                Download Ollama
+                            </a>
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <footer class="footer">
+                <p>HustleMate AI © 2026</p>
+                <p>Built for independent creators and small businesses.</p>
+            </footer>
+
+        </main>
+
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
